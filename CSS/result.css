@@ -1,0 +1,107 @@
+body{
+    height: 90%;
+    background-color: blanchedalmond;
+    text-align:  center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.bottuns {
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+    color: rgb(243, 242, 240);
+    background-color: rgb(86, 26, 1);
+}
+.container{
+    width:70%;
+    
+   
+    background:rgb(224, 213, 213);
+
+    padding:65px;
+
+    border-radius:15px;
+
+    box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+
+    text-align:center;
+}
+.Match{
+    
+   
+    background-color: rgb(201, 246, 246);
+    text-align: center ;
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid black;
+    font-size: 30px;
+}
+.Matched{
+    
+  
+    background-color: rgb(219, 204, 233);
+    text-align: left;
+    margin: 2px;
+    padding:10px ;
+    border : 2px solid black
+}
+.Missing{
+     background-color: rgb(245, 222, 118);
+    text-align: left;
+    margin: 2px;
+    padding:10px ;
+    border : 2px solid black
+}
+.Suggestions{
+     background-color: rgb(244, 198, 205);
+    text-align: left;
+    margin: 2px;
+    padding:10px ;
+    border : 2px solid black
+}
+
+
+.btn{
+    text-align: center;
+    color: aliceblue;
+    background-color: blue;
+    margin: 2px;
+    padding: 5px;
+    border-radius:8px;
+    font-size:23px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.btn :hover{
+    color: rgb(221, 221, 233);
+   
+    transform: scale(2);
+}
+.Download{
+    text-align: center;
+    color: blue;
+    background-color: aliceblue;
+    margin: 25px;
+    padding: 5px;
+    border-radius:8px;
+    font-size:23px;
+    cursor:pointer;
+    transition:0.3s;  
+}
+.Download :hover{
+    color: blue;
+    transform: scale();
+}
+h1{
+    
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    text-align: center;
+}
