@@ -3,7 +3,7 @@ body{
     background-color: blanchedalmond;
     text-align:  center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
     justify-content: center;
     align-items: center;
@@ -11,29 +11,27 @@ body{
 
 }
 .bottuns {
-    text-align: left;
     padding: 5px;
     margin: 10px;
     color: rgb(243, 242, 240);
     background-color: rgb(86, 26, 1);
+    text-align: left;
 }
 .container{
     width:70%;
-    
-   
     background:rgb(224, 213, 213);
-
     padding:65px;
-
     border-radius:15px;
-
     box-shadow:0px 10px 25px rgba(0,0,0,0.3);
-
     text-align:center;
+}
+.cont{
+    display: flex;
+    flex-direction: row;
 }
 .Match{
     
-   
+    height: 400px;
     background-color: rgb(201, 246, 246);
     text-align: center ;
     padding: 10px;
@@ -42,8 +40,7 @@ body{
     font-size: 30px;
 }
 .Matched{
-    
-  
+    width: 200px;
     background-color: rgb(219, 204, 233);
     text-align: left;
     margin: 2px;
@@ -51,6 +48,7 @@ body{
     border : 2px solid black
 }
 .Missing{
+    width: 200px;
      background-color: rgb(245, 222, 118);
     text-align: left;
     margin: 2px;
@@ -58,6 +56,7 @@ body{
     border : 2px solid black
 }
 .Suggestions{
+    width: 200px;
      background-color: rgb(244, 198, 205);
     text-align: left;
     margin: 2px;
@@ -70,17 +69,16 @@ body{
     text-align: center;
     color: aliceblue;
     background-color: blue;
-    margin: 2px;
+    margin: 25px;
     padding: 5px;
     border-radius:8px;
-    font-size:23px;
+    font-size:20px;
     cursor:pointer;
     transition:0.3s;
 }
-.btn :hover{
+.btn:hover{
     color: rgb(221, 221, 233);
-   
-    transform: scale(2);
+    transform:scale(1.36);
 }
 .Download{
     text-align: center;
@@ -89,13 +87,13 @@ body{
     margin: 25px;
     padding: 5px;
     border-radius:8px;
-    font-size:23px;
+    font-size:20px;
     cursor:pointer;
     transition:0.3s;  
 }
-.Download :hover{
+.Download:hover{
     color: blue;
-    transform: scale();
+    transform:scale(1.36);
 }
 h1{
     
