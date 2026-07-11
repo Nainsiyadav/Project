@@ -31,26 +31,26 @@ def extract_resume_skills(resume_text) :
 def extract_jd_skills(jd_text) :
     jd_skills = set()
 
- # text clean
-jd_text = jd_text.replace(","," ")
-jd_text = jd_text.replace(";"," ")
-jd_text = jd_text.replace("."," ")
-jd_text = jd_text.replace("("," ")
-jd_text = jd_text.replace(")"," ")
-jd_text = jd_text.replace(":"," ")
+    # text clean
+    jd_text = jd_text.replace(","," ")
+    jd_text = jd_text.replace(";"," ")
+    jd_text = jd_text.replace("."," ")
+    jd_text = jd_text.replace("("," ")
+    jd_text = jd_text.replace(")"," ")
+    jd_text = jd_text.replace(":"," ")
 
-# split
-words = jd_text.split()
+    # split
+    words = jd_text.split()
 
-#  Compare with Master skills
-for  word in words:
-    if word in  ALIASES:
-        word  =  ALIASES[word]
+    #  Compare with Master skills
+    for  word in words:
+        if word in  ALIASES:
+            word  =  ALIASES[word]
     
-    if word in  MASTER_SKILLS:
-        jd_skills.add(word)
+        if word in  MASTER_SKILLS:
+            jd_skills.add(word)
         
- return jd_skills
+    return jd_skills
 
 
 
