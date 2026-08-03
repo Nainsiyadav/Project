@@ -10,12 +10,9 @@ body{
     min-height: 100vh;
 
 }
-.bottuns {
-    padding: 5px;
-    margin: 10px;
-    color: rgb(243, 242, 240);
-    background-color: rgb(86, 26, 1);
-    text-align: left;
+nav{
+    color: black;
+    padding: 15px;
 }
 .container{
     width:70%;
