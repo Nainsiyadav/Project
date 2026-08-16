@@ -1,5 +1,5 @@
 # Import skills.py 
-from skills import MASTER_SKILLS,ALIASES
+from .skills import MASTER_SKILLS,ALIASES
 
 # Functions
 # resume text

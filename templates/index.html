@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Project</title>
-    <link rel="stylesheet" href="..\CSS\style.css" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
 </head>
 <body >
    <div class="container">
@@ -17,15 +17,15 @@
     <p>Empowering smarter hiring through intelligent resume analysis. Compare your resume<br>
          with job requirements and discover the skills needed for your next opportunity.</p>
         <br>
-    <form >
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
         <div>
         <label>Upload Resume(PDF) :</label> 
-        <input type="file" accept=".pdf" required placeholder="Upload your Resume PDF here " >
+        <input type="file" name="resume" accept=".pdf" required placeholder="Upload your Resume PDF here " >
         </div>
 
       <div>
         <label>Upload Job Description(PDF) :</label> 
-        <input type="file" accept=".pdf" required placeholder="Upload your JOB DESCRIPTION PDF here " >
+        <input type="file" name="jd" accept=".pdf" required placeholder="Upload your JOB DESCRIPTION PDF here " >
         </div>
         
         <button type="submit" >Analyze Resume</button>

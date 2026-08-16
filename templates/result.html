@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Project</title>
-    <link rel="stylesheet" href="..\CSS\result.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
 </head>
 <body>
     
     <div class="container">
         <nav>
-        <a href="index.html">HOME</a>
+        <a href="{{ url_for('home') }}">HOME</a>
     </nav>
         <h1>AI Resume Analyzer</h1>
         <p1>Smart Resume Analysis For Better Career Opportunities</p1>
@@ -21,20 +21,29 @@
         
         <div class="Match">
         <label><h1>🎯Match Score </h1></label>
-        <p></p>
+        <p class="score">{{ match_score }}%</p>
         </div>
         <div class="Matched">
             
             <label><h2>✅Matched skills</h2></label>
-            <p></p>
+            <p>{% for skill in matched_skill %}
+                <span class="skill">{{ skill }}</span>
+                {% endfor %}
+            </p>
         </div>
         <div class="Missing">
             <label><h2>❌Missing skills  </h2></label>
-            <p></p>
+            <p>{% for skill in missing_skill %}
+                <span class="skill">{{skill}}</span>
+                {% endfor %}
+            </p>
         </div>
         <div class="Suggestions">
             <label><h2>💡Suggestions  </h2></label>
-            <p></p>
+            <p>{% for skill in suggestion %}
+                <span class="skill">{{ skill }}</span>
+                {% endfor %}
+            </p>
         </div>
         </div>
         
