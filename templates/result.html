@@ -50,7 +50,9 @@
         <button class="btn" type="submit">Analyze Another Resume</button>
         
        
-        <button class="Download" type="Download Report">Download Report(PDF)</button> 
+        <a href="{{ url_for('download_report')}}">
+            <button class="Download">Download Report (PDF)</button>
+        </a>
         
        
     </div>
