@@ -198,17 +198,6 @@ Open in browser
 http://127.0.0.1:5000
 ```
 
----
-
-# 📷 Screenshots
-
-> Add screenshots of:
-- Home Page
-- Resume Upload Page
-- Result Page
-
----
-
 # 👩‍💻 Author
 
 **Nainsi Yadav**
