@@ -1,76 +1,143 @@
 
-/* Common Styling */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
 }
 
-/* Body */
-
 body {
-    background-color: papayawhip;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+    padding: 30px 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8eaff, #f5f3ff, #e4f3ff);
+    color: #252344;
 }
-
-/* Main Container */
 
 .container {
-    width: 65%;
-    background: rgb(224, 213, 213);
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    padding: 45px 50px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(67, 56, 202, 0.12);
 }
 
-/* Heading */
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #6c63ff, #9b8cff);
+    color: white;
+    font-size: 32px;
+}
 
 h1 {
-    margin-bottom: 20px;
+    font-size: 34px;
+    color: #302b63;
+    margin-bottom: 12px;
 }
 
-/* Labels */
+.subtitle {
+    color: #6c63d9;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.description {
+    color: #77758b;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    background: #f8f8ff;
+    border: 2px dashed #c8c5f5;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #7569ed;
+    background: #f2f1ff;
+}
+
+.upload-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    color: #373267;
+    margin-bottom: 7px;
 }
 
-/* File Input */
-
-input[type="file"] {
-    width: 70%;
-    padding: 8px;
-    border: 2px solid #101010;
-    border-radius: 5px;
+.upload-box p {
+    color: #9290a5;
+    font-size: 13px;
     margin-bottom: 15px;
 }
 
-/* Button */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #dedcf3;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #555;
+}
 
 button {
-    color: white;
-    background-color: blue;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
     border: none;
-    border-radius: 8px;
-    font-size: 23px;
-    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6257e8, #8875f5);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #050df1;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(98, 87, 232, 0.3);
 }
 
-form {
-    color: black;
+button span {
+    margin-left: 8px;
+    font-size: 19px;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #aaa8bd;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
 }

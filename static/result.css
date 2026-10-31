@@ -1,112 +1,262 @@
 
-body{
-    height: 90%;
-    background-color: blanchedalmond;
-    text-align:  center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8eaff, #f5f3ff, #e4f3ff);
+    color: #302b55;
+}
+
+.container {
+    max-width: 950px;
+    width: 100%;
+    margin: auto;
+    padding: 35px 45px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(67, 56, 202, 0.12);
+}
+
+nav {
+    margin-bottom: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6c63d9;
+    font-weight: 600;
+}
+
+header {
+    text-align: center;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 12px;
     display: flex;
-    flex-direction: column;
-    gap: 5px;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-
-}
-nav{
-    color: black;
-    padding: 15px;
-}
-.container{
-    width:70%;
-    background:rgb(224, 213, 213);
-    padding:65px;
-    border-radius:15px;
-    box-shadow:0px 10px 25px rgba(0,0,0,0.3);
-    text-align:center;
-}
-.cont{
-    display: flex;
-    flex-direction: row;
-}
-.Match{
-    
-    height: 400px;
-    background-color: rgb(201, 246, 246);
-    text-align: center ;
-    padding: 10px;
-    margin: 2px;
-    border: 2px solid black;
+    background: linear-gradient(135deg, #6257e8, #9b8cff);
+    color: white;
+    border-radius: 16px;
     font-size: 30px;
 }
-.Matched{
-    width: 200px;
-    background-color: rgb(219, 204, 233);
-    text-align: left;
-    margin: 2px;
-    padding:10px ;
-    border : 2px solid black
-}
-.Missing{
-    width: 200px;
-     background-color: rgb(245, 222, 118);
-    text-align: left;
-    margin: 2px;
-    padding:10px ;
-    border : 2px solid black
-}
-.Suggestions{
-    width: 200px;
-     background-color: rgb(244, 198, 205);
-    text-align: left;
-    margin: 2px;
-    padding:10px ;
-    border : 2px solid black
+
+header h1 {
+    font-size: 32px;
+    color: #302b63;
 }
 
+.subtitle {
+    margin-top: 8px;
+    color: #77758b;
+    font-size: 14px;
+}
 
-.btn{
+.heading {
     text-align: center;
-    color: aliceblue;
-    background-color: blue;
-    margin: 25px;
-    padding: 5px;
-    border-radius:8px;
-    font-size:20px;
-    cursor:pointer;
-    transition:0.3s;
+    margin: 35px 0 25px;
 }
-.btn:hover{
-    color: rgb(221, 221, 233);
-    transform:scale(1.36);
+
+.heading h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
 }
-.Download{
+
+.heading p {
+    color: #858399;
+    font-size: 14px;
+}
+
+.score-card {
     text-align: center;
-    color: blue;
-    background-color: aliceblue;
-    margin: 25px;
-    padding: 5px;
-    border-radius:8px;
-    font-size:20px;
-    cursor:pointer;
-    transition:0.3s;  
+    background: #f8f8ff;
+    border: 1px solid #e8e6ff;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
 }
-.Download:hover{
-    color: blue;
-    transform:scale(1.36);
+
+.score-card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
-h1{
-    
-    margin: 0px;
-    padding: 0px;
+
+.score-circle {
+    width: 155px;
+    height: 155px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        #7569ed var(--score),
+        #e5e3f5 var(--score)
+    );
 }
-h2{
-    text-align: center;
+
+.score-inner {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.score-inner span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #6257e8;
+}
+
+.score-inner small {
+    color: #9290a5;
+    font-size: 12px;
+}
+
+.score-card > p {
+    color: #858399;
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.result-card {
+    padding: 22px;
+    border-radius: 15px;
+    border: 1px solid #eeeef5;
+    background: #fff;
+}
+
+.result-card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    font-size: 13px;
+    color: #9290a5;
+    margin-bottom: 18px;
+}
+
+.matched {
+    background: #f2fbf6;
+    border-color: #d5f0df;
+}
+
+.missing {
+    background: #fff6f5;
+    border-color: #f5dedd;
+}
+
+.suggestions {
+    background: #f8f6ff;
+    border-color: #e5ddff;
+    grid-column: 1 / -1;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
 .skill {
     display: inline-block;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 8px;
-    background-color: white;
-    border: 1px solid black;
-    font-size: 16px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #dedcf3;
+    color: #514b83;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.empty {
+    color: #858399;
+    font-size: 13px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    color: white;
+    background: linear-gradient(135deg, #6257e8, #8875f5);
+}
+
+.secondary {
+    color: #6257e8;
+    background: white;
+    border: 1px solid #7569ed;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(98, 87, 232, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa8bd;
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 25px 18px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .suggestions {
+        grid-column: auto;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
 }

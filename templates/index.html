@@ -1,35 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
 </head>
-<body >
-   <div class="container">
-    <h1>AI Resume Analyzer</h1>
-    <br>
-    <br>
-    <i>Smart Resume Analysis for Better Career Opportunities</i>
-    <br>
-    <br>
-    <p>Empowering smarter hiring through intelligent resume analysis. Compare your resume<br>
-         with job requirements and discover the skills needed for your next opportunity.</p>
-        <br>
-    <form action="/analyze" method="POST" enctype="multipart/form-data">
-        <div>
-        <label>Upload Resume(PDF) :</label> 
-        <input type="file" name="resume" accept=".pdf" required placeholder="Upload your Resume PDF here " >
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">✦</div>
+
+        <h1>AI Resume Analyzer</h1>
+
+        <p class="subtitle">
+            Smart Resume Analysis for Better Career Opportunities
+        </p>
+
+        <p class="description">
+            Empowering smarter hiring through intelligent resume analysis.
+            Compare your resume with job requirements and discover the
+            skills needed for your next opportunity.
+        </p>
+
+        <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+            <div class="upload-box">
+                <div class="upload-icon">📄</div>
+
+                <label for="resume">Upload Your Resume</label>
+
+                <p>Choose your resume in PDF format</p>
+
+                <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf"
+                    required
+                >
+            </div>
+
+            <div class="upload-box">
+                <div class="upload-icon">📋</div>
+
+                <label for="jd">Upload Job Description</label>
+
+                <p>Choose the job description in PDF format</p>
+
+                <input
+                    type="file"
+                    id="jd"
+                    name="jd"
+                    accept=".pdf"
+                    required
+                >
+            </div>
+
+            <button type="submit">
+                Analyze My Resume <span>→</span>
+            </button>
+
+        </form>
+
+        <div class="footer">
+            Powered by Intelligent Resume Analysis
         </div>
 
-      <div>
-        <label>Upload Job Description(PDF) :</label> 
-        <input type="file" name="jd" accept=".pdf" required placeholder="Upload your JOB DESCRIPTION PDF here " >
-        </div>
-        
-        <button type="submit" >Analyze Resume</button>
-    </form>
     </div>
+
 </body>
 </html>

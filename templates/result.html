@@ -1,60 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Project</title>
+
+    <title>Resume Analysis Result</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
 </head>
+
 <body>
-    
+
     <div class="container">
+
         <nav>
-        <a href="{{ url_for('home') }}">HOME</a>
-    </nav>
-        <h1>AI Resume Analyzer</h1>
-        <p1>Smart Resume Analysis For Better Career Opportunities</p1>
-        
-        <h2>📊Resume Analysis Result</h2>
-        <p>Your resume has been analyzed against the job description.</p>
-        <div class="cont">
-        
-        <div class="Match">
-        <label><h1>🎯Match Score </h1></label>
-        <p class="score">{{ match_score }}%</p>
+            <a href="{{ url_for('home') }}">← Home</a>
+        </nav>
+
+        <header>
+            <div class="icon">✦</div>
+            <h1>AI Resume Analyzer</h1>
+            <p class="subtitle">Smart Resume Analysis for Better Career Opportunities</p>
+        </header>
+
+        <section class="heading">
+            <h2>📊 Resume Analysis Result</h2>
+            <p>Your resume has been analyzed against the job description.</p>
+        </section>
+
+        <div class="score-card">
+            <h2>🎯 Resume Match Score</h2>
+
+            <div class="score-circle"
+                 style="--score: {{ match_score }}%;">
+                <div class="score-inner">
+                    <span>{{ match_score }}%</span>
+                    <small>Match Score</small>
+                </div>
+            </div>
+
+            <p>See how well your skills match the job requirements.</p>
         </div>
-        <div class="Matched">
-            
-            <label><h2>✅Matched skills</h2></label>
-            <p>{% for skill in matched_skill %}
-                <span class="skill">{{ skill }}</span>
-                {% endfor %}
-            </p>
+
+        <div class="results-grid">
+
+            <div class="result-card matched">
+                <h2>✅ Matched Skills</h2>
+                <p class="card-description">Skills found in your resume</p>
+
+                <div class="skills">
+                    {% for skill in matched_skill %}
+                        <span class="skill">{{ skill }}</span>
+                    {% else %}
+                        <span class="empty">No matched skills found.</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="result-card missing">
+                <h2>❌ Missing Skills</h2>
+                <p class="card-description">Skills you need to improve</p>
+
+                <div class="skills">
+                    {% for skill in missing_skill %}
+                        <span class="skill">{{ skill }}</span>
+                    {% else %}
+                        <span class="empty">No missing skills found.</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="result-card suggestions">
+                <h2>💡 Suggestions</h2>
+                <p class="card-description">Focus on learning these skills</p>
+
+                <div class="skills">
+                    {% for skill in suggestion %}
+                        <span class="skill">{{ skill }}</span>
+                    {% else %}
+                        <span class="empty">Your resume matches all identified skills!</span>
+                    {% endfor %}
+                </div>
+            </div>
+
         </div>
-        <div class="Missing">
-            <label><h2>❌Missing skills  </h2></label>
-            <p>{% for skill in missing_skill %}
-                <span class="skill">{{skill}}</span>
-                {% endfor %}
-            </p>
+
+        <div class="actions">
+            <a href="{{ url_for('home') }}" class="btn primary">
+                Analyze Another Resume →
+            </a>
+
+            <a href="{{ url_for('download_report') }}" class="btn secondary">
+                ↓ Download Report (PDF)
+            </a>
         </div>
-        <div class="Suggestions">
-            <label><h2>💡Suggestions  </h2></label>
-            <p>{% for skill in suggestion %}
-                <span class="skill">{{ skill }}</span>
-                {% endfor %}
-            </p>
-        </div>
-        </div>
-        
-        <button class="btn" type="submit">Analyze Another Resume</button>
-        
-       
-        <a href="{{ url_for('download_report')}}">
-            <button class="Download">Download Report (PDF)</button>
-        </a>
-        
-       
+
+        <footer>
+            Powered by Intelligent Resume Analysis
+        </footer>
+
     </div>
+
 </body>
 </html>
